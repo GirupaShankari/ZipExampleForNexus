@@ -24,7 +24,7 @@ pipeline {
                    
                     nexusArtifactUploader artifacts: [
                         [
-                            artifactId: 'simple-app', 
+                            artifactId: 'mySecondZipFile', 
                             classifier: '', 
                             file: "Installation of Nexus Repository on Windows.zip", 
                             type: 'zip'
