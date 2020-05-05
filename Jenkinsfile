@@ -6,7 +6,7 @@ pipeline {
             steps{
                 script{
 
-                    nexusArtifactUploader artifacts: [
+                  /*  nexusArtifactUploader artifacts: [
                         [
                             artifactId: 'Installation of Nexus Repository on Windows.zip', 
                             classifier: '', 
@@ -20,17 +20,24 @@ pipeline {
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: 'MyFirstNuget', 
-                    version: "1" 
-                    
-                  /*  nexusArtifactUploader (
+                    version: "1" */
+                   
+                    nexusArtifactUploader artifacts: [
+                        [
+                            artifactId: 'simple-app', 
+                            classifier: '', 
+                            file: "Installation of Nexus Repository on Windows.zip", 
+                            type: 'zip'
+                        ]
+                    ], 
                     credentialsId: 'nexus3', 
-                    groupId: 'com.repo',
+                    groupId: 'in.javahome', 
                     nexusUrl: '10.79.244.15:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
-                    repository: 'MyFirstNuget', 
-                    version: '1'); */
-
+                    repository: 'simpleapp-release', 
+                    version: "1"
+                    
                     
                     }
             }
