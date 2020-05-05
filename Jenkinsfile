@@ -6,11 +6,11 @@ pipeline {
             steps{
                 script{
 
-                   /* nexusArtifactUploader artifacts: [
+                    nexusArtifactUploader artifacts: [
                         [
-                            artifactId: 'simple-app', 
+                            artifactId: 'myZip', 
                             classifier: '', 
-                            file: "target/simple-app-2.0.0.war", 
+                            file: "myZip", 
                             type: 'zip'
                         ]
                     ], 
@@ -20,16 +20,17 @@ pipeline {
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: 'MyFirstNuget', 
-                    version: "1" */
+                    version: "1" 
                     
-                    nexusArtifactUploader (
+                  /*  nexusArtifactUploader (
                     credentialsId: 'nexus3', 
                     groupId: 'com.repo',
                     nexusUrl: '10.79.244.15:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: 'MyFirstNuget', 
-                    version: '1');
+                    version: '1'); */
+
                     
                     }
             }
