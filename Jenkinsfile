@@ -8,9 +8,9 @@ pipeline {
 
                     nexusArtifactUploader artifacts: [
                         [
-                            artifactId: 'myZip', 
+                            artifactId: 'Installation of Nexus Repository on Windows.zip', 
                             classifier: '', 
-                            file: "myZip", 
+                            file: "Installation of Nexus Repository on Windows.zip", 
                             type: 'zip'
                         ]
                     ], 
